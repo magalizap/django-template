@@ -4,9 +4,9 @@ from .models import Estudiante, Profesor, Curso, Entregable
 # Create your views here.
 def lista_estudiantes(request):
     estudiantes = Estudiante.objects.all()
-    return render(request, 'estudiantes_list.html', {'estudiantes': estudiantes})
+    return render(request, 'lista_estudiantes.html', context={'estudiantes': estudiantes})
 
 
 def detalle_estudiante(request, pk):
     estudiante = get_object_or_404(Estudiante, pk=pk)
-    return render(request, 'estudiante_detail.html', {'estudiante': estudiante})
+    return render(request, 'detalle_estudiante.html', context={'estudiante': estudiante})

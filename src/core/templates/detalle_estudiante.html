@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} Inicio - Plataforma de estudiantes {% endblock %}
+
+{% block content %}
+
+<h1>Datos del estudiante</h1>
+<p>Nombre: {{ estudiante.nombre }} {{ estudiante.apellido }}</p>
+<p>Email: {{ estudiante.email }}</p>
+
+{% endblock %}
