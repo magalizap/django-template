@@ -3,8 +3,14 @@
 
 {% block content %}
 
-<h1>Datos del estudiante</h1>
-<p>Nombre: {{ estudiante.nombre }} {{ estudiante.apellido }}</p>
-<p>Email: {{ estudiante.email }}</p>
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title mb-4">Datos del estudiante</h1>
+            <p class="card-text"><strong>Nombre:</strong> {{ estudiante.nombre }} {{ estudiante.apellido }}</p>
+            <p class="card-text"><strong>Email:</strong> {{ estudiante.email }}</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

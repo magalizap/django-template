@@ -3,11 +3,18 @@
 
 {% block content %}
 
-    <h1>Lista de Estudiantes</h1>
-    <ul>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Lista de Estudiantes</h1>
+    <ul class="list-group">
         {% for estudiante in estudiantes %}
-        <li><a href="{% url 'detalle_estudiante' estudiante.id %}">{{ estudiante.nombre }} {{ estudiante.apellido }}</a></li>
+        <a href="{% url 'detalle_estudiante' estudiante.id %}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1">Nombre y apellido: <span>{{ estudiante.nombre }} {{ estudiante.apellido }}</span></h5>
+                <small>Email: {{estudiante.email}}</small>
+            </div>
+        </a>
         {% endfor %}
     </ul>
+</div>
 
 {% endblock %}
