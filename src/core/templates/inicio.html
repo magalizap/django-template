@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} Inicio - Plataforma de estudiantes {% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 mx-auto text-center">
+            <h1 class="display-4 mb-4">Bienvenido a la Plataforma Educativa</h1>
+            <p class="lead mb-4">Gestiona tus estudiantes y cursos de forma eficiente</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="{% url 'lista_estudiantes' %}" class="btn btn-primary btn-lg px-4 gap-3">Ver Estudiantes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -2,6 +2,10 @@ from django.shortcuts import render, get_object_or_404
 from .models import Estudiante, Profesor, Curso, Entregable
 
 # Create your views here.
+def inicio(request):
+    return render(request, 'inicio.html')
+
+
 def lista_estudiantes(request):
     estudiantes = Estudiante.objects.all()
     return render(request, 'lista_estudiantes.html', context={'estudiantes': estudiantes})
