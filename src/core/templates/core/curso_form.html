@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'core/base.html' %}
 {% block title %} Formulario - Agregar Curso {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
                             {{ form.as_table }}
                         </table>
                         <button type="submit" class="btn btn-primary w-100 mt-3">Enviar</button>
-                        <a href="{%url 'lista_cursos'%}" class="btn btn-secondary w-100 mt-2">Cancelar</a>
+                        <a href="{%url 'core:lista_cursos'%}" class="btn btn-secondary w-100 mt-2">Cancelar</a>
                     </form>
                 </div>
             </div>

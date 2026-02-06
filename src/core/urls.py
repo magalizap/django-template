@@ -1,6 +1,8 @@
 from django.urls import path
 from .views import inicio, lista_cursos, lista_estudiantes, detalle_estudiante, curso_form, detalle_curso
 
+app_name = 'core'
+
 urlpatterns = [
     path('', inicio, name='inicio'),
     path('lista/estudiantes/', lista_estudiantes, name='lista_estudiantes'),
