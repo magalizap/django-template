@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Inicio - Plataforma de estudiantes {% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Cursos Disponibles</h1>
+    <a href="{% url 'curso_form' %}" class="btn btn-primary mb-3">Crear Nuevo Curso</a>
+    <form action="{% url 'lista_cursos' %}" method="get">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Buscar..." name="buscar" value="{{ request.GET.buscar }}">
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+        </div>
+    </form>
+    <ul class="list-group">
+        {% for curso in cursos %}
+        <a href="{% url 'detalle_curso' curso.id %}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1">Nombre: <span>{{ curso.nombre }}</span></h6>
+                    <small>Camada: {{curso.camada}}</small>
+            </div>
+        </a>
+        {% endfor %}
+    </ul>
+    
+</div>
+
+{% endblock %}

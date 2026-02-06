@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} Inicio - Plataforma de estudiantes {% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title mb-4">Datos del curso</h1>
+            <p class="card-text"><strong>Nombre:</strong> {{ curso.nombre }}</p>
+            <p class="card-text"><strong>Camada:</strong> {{ curso.camada }}</p>
+            <p class="card-text"><strong>Fecha de inicio:</strong> {{ curso.fecha_inicio }}</p>
+            <p class="card-text"><strong>Duración (meses):</strong> {{ curso.duracion_meses }}</p>
+            <p class="card-text"><strong>Estado:</strong> {{ curso.estado }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
